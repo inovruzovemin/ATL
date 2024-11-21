@@ -1,43 +1,37 @@
 package PACKAGE_NAME.Student;
+//1.Academy Student Teacher class yaradirsiz ve extend edir Academyden +
+//2.Academy name ve address olur display Info metodu +
+//3.Student de studentId ve course olur study metodu (filan idli telebe filan course alir seklinde cap etsin)+
+//Teacher de teacherId ve subject olur teach metod(filan id mlm filan fendi kecir kimi text) +
+//butun claslarin   Constructor ve set get leri olsun +
+//main clasinda her birinin object yaradib metodlarini cagirin
 
-public class Student extends Academy{
-    private int studentID;
-    private String course;
-    private String studentName;
+public class Academy {
+    private String name;
+    private String address;
 
-    public void study (){
-        System.out.println("Student number "  + studentID + " - " + studentName + " is studying in the " + course +
-                " course in "+ getName() + ". Adress : " + getAddress() );
+    public Academy(String address, String name) {
+        this.address = address;
+        this.name = name;
+    }
+    public void display() {
+        System.out.println(name + " is located in " + address);
     }
 
-    public Student(String address,String name,int studentID, String course, String studentName) {
-        super(address,name);
-        this.studentName = studentName;
-        this.studentID = studentID;
-        this.course = course;
+
+    public String getName() {
+        return name;
     }
 
-    public String getStudentName() {
-        return studentName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public String getAddress() {
+        return address;
     }
 
-    public int getStudentID() {
-        return studentID;
-    }
-
-    public void setStudentID(int studentID) {
-        this.studentID = studentID;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
