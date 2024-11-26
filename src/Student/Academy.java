@@ -9,6 +9,8 @@ package PACKAGE_NAME.Student;
 public class Academy {
     private String name;
     private String address;
+    private int studentCount;
+    private Student[] students;
 
     public Academy(String address, String name) {
         this.address = address;
