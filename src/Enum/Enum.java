@@ -1,0 +1,7 @@
+package PACKAGE_NAME.Enum;
+
+ enum Week {
+
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    }
+
