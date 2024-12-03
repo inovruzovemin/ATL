@@ -19,4 +19,14 @@ public class StudentAge {
             }
             return result;
         }
+        public static Student[] uncheck18(Student[] students) {
+            Student[] result = new Student[students.length];
+            int index = 0;
+            for (Student student : students) {
+                if (student.studentAge() < 18) {
+                    result[index++] = student;
+                }
+            }
+            return result;
+        }
     }
