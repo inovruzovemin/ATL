@@ -3,7 +3,8 @@ package PACKAGE_NAME.DataStructures;
 public class Book {
     String title;
     String author;
-    private boolean available = true;
+    String genre;
+    private boolean available;
 
     public Book(String name, String author) {
         this.title = name;
@@ -28,9 +29,7 @@ public class Book {
         if (available) {
             available = false;
             System.out.println("\n" + title + " rented successfully.");
-        } else {
-            System.out.println("\n" +title + " already rented.");
-        }
+        } throw new BookIsAlreadyRented("Book is already rented");
     }
 public boolean isAvailable() {
         return available;
@@ -40,9 +39,7 @@ public boolean isAvailable() {
         if (!available) {
             available = true;
             System.out.println("\n" +title + " returned successfully.");
-        } else {
-            System.out.println("\n" +title + " already returned.");
-        }
+        } throw new BookNotFound("Book is not found");
 
 
 

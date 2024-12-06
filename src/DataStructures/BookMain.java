@@ -16,9 +16,21 @@ public class BookMain {
 
         library.showAvailableBooks();
 
-        library.rentBook("War and Peace");
-        library.rentBook("Crime and Punishment");
-        library.returnBook("Crime and Punishment");
+        try {
+            library.rentBook("War and Peace");
+            library.rentBook("War and Peace");
+        }
+        catch (BookIsAlreadyRented e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            library.returnBook("Crime and Punishment");
+        }
+        catch (BookNotFound e) {
+            System.out.println(e.getMessage());
+        }
+
         library.showAvailableBooks();
 
 
