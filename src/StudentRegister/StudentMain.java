@@ -1,44 +1,31 @@
 package PACKAGE_NAME.StudentRegister;
 
-import java.time.LocalDate;
+
 import java.util.HashSet;
+import java.util.List;
 
 public class StudentMain {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Student Register.");
+        HashSet <Student> studentCommunity = new HashSet<Student>();
 
-        HashSet<Student> set = new HashSet<>();
-        set.add(new Student("Emin", LocalDate.of(1999, 12, 20)));
-        set.add(new Student("Aliya", LocalDate.of(2008, 12, 24)));
-        set.add(new Student("Nigar", LocalDate.of(2006, 12, 12)));
-        set.add(new Student("Musa", LocalDate.of(1995, 12, 22)));
-        set.add(new Student("Kamran", LocalDate.of(2009, 12, 5)));
+        studentCommunity.add(new Student("Ilkin", 1));
+        studentCommunity.add(new Student("Xan", 2));
+        studentCommunity.add(new Student("Elnur", 3));
+        studentCommunity.add(new Student("Emin", 4));
+        studentCommunity.add(new Student("Musa", 5));
+        studentCommunity.add(new Student("Huseyn", 6));
+        studentCommunity.add(new Student("Tofiq", 3));
+        studentCommunity.add(new Student("Tofiq", 3));
 
 
-        System.out.println("\n Student List:");
-        for (Student student1 : set) {
-            System.out.println(student1);
+
+        for (Student element : studentCommunity) {
+            System.out.print(element);
         }
 
-        Student[] oldStudent = StudentAge.check18(set);
 
-        System.out.println("\n 18 years old and older students :");
 
-        for (Student student2 : oldStudent) {
-            if (student2 != null) { // Null yoxlaması
-                System.out.println(student2);
-            }
-        }
-
-        Student[] youngStudent = StudentAge.uncheck18(set);
-
-        System.out.println("\n Young student list:");
-
-        for (Student student3 : youngStudent) {
-            if (student3 != null) { // Null yoxlaması
-                System.out.println(student3);
-            }
         }
     }
-}
+
 

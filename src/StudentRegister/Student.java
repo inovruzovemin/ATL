@@ -1,30 +1,41 @@
 package PACKAGE_NAME.StudentRegister;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Student {
-    private String name;
-    LocalDate birthDate;
+    private String studentName;
+    private int studentId;
 
-    public Student(String name, LocalDate birthDate) {
-        this.name = name;
-        this.birthDate = birthDate;
-    }
-    public int studentAge() {
-        return Period.between(this.birthDate, LocalDate.now()).getYears();
+    public Student(String studentName, int studentId) {
+        this.studentName = studentName;
+        this.studentId = studentId;
+        System.out.println("Student added: Student{name="+ studentName +",id="+ studentId + "}");
     }
 
-    public String getName() {
-        return name;
+    public String getStudentName() {
+        return studentName;
     }
-    public LocalDate getBirthDate() {
-        return birthDate;
+
+    public int getStudentId() {
+        return studentId;
     }
-@Override
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    @Override
     public String toString() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        return "Ad: " + getName() + ", Doğum tarixi: " + birthDate.format(formatter);
+        return "\nStudent{" +
+                "name='" + studentName + '\'' +
+                ", id=" + studentId +
+                '}';
     }
-}
+
+
+    }
+
