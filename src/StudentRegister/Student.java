@@ -1,5 +1,4 @@
 package PACKAGE_NAME.StudentRegister;
-
 import java.util.Objects;
 
 public class Student {
@@ -9,9 +8,7 @@ public class Student {
     public Student(String studentName, int studentId) {
         this.studentName = studentName;
         this.studentId = studentId;
-        System.out.println("Student added: Student{name="+ studentName +",id="+ studentId + "}");
     }
-
     public String getStudentName() {
         return studentName;
     }
@@ -20,22 +17,25 @@ public class Student {
         return studentId;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
-
     @Override
     public String toString() {
-        return "\nStudent{" +
+        return "Student{" +
                 "name='" + studentName + '\'' +
-                ", id=" + studentId +
+                ",id=" + studentId +
                 '}';
     }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(studentName,studentId);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId && Objects.equals(studentName, student.studentName);
+    }
+}
 
