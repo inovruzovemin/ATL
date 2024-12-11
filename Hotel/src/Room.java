@@ -2,17 +2,17 @@ public  class Room {
     private int roomNumber;
     private double price;
     private boolean isBooked;
-    private RoomType roomType;
+//    private RoomType roomType;
 
-    public RoomType getRoomType() {
-        return roomType;
-    }
+//    public abstract class getRoomType() {
+//        return roomType;
+//    }
 
     public Room(int roomNumber, double price, RoomType roomType) {
         this.roomNumber = roomNumber;
         this.price = price;
         this.isBooked = true;
-        this.roomType = roomType;
+//        this.roomType = roomType;
     }
     public void displayInfo () {
 

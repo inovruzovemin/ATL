@@ -6,12 +6,12 @@ public class DeluxeRoom extends Room {
         this.balconyAvailable = true;
     }
 
-    @Override
-    public void displayInfo() {
-        System.out.println("Room number: "+ getRoomNumber()
-                +" Price: "+getPrice()+
-                " Kitchen " +
-                (balconyAvailable?"Available":"Not available"));
-    }
+//    @Override
+//    public void displayInfo() {
+//        System.out.println("Room number: "+ getRoomNumber()
+//                +" Price: "+getPrice()+
+//                " Kitchen " +
+//                (balconyAvailable?"Available":"Not available"));
+//    }
 
 }

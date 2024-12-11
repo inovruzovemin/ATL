@@ -1,8 +1,19 @@
 public enum RoomType {
-    STANDARD
-            {
+    STANDARD {
+        @Override
+        public void displayInfo() {
+        }
+    },
+    SUITE {
+        @Override
+        public void displayInfo() {
+        }
+    },
+    DELUXE{
+        @Override
+        public void displayInfo() {
+        }
+    };
 
-            },
-    SUITE,
-    DELUXE,
-}
+    public abstract void displayInfo();
+    }

@@ -6,11 +6,11 @@ public class StandardRoom extends Room{
         this.isSingleBed = true;
     }
 
-    @Override
-    public void displayInfo() {
-        System.out.println("Room number: "+ getRoomNumber()
-                +" Price: "+getPrice()+
-                " Bed count : " +
-                (isSingleBed?"Odd":"Even"));
-    }
+//    @Override
+//    public void displayInfo() {
+//        System.out.println("Room number: "+ getRoomNumber()
+//                +" Price: "+getPrice()+
+//                " Bed count : " +
+//                (isSingleBed?"Odd":"Even"));
+//    }
 }

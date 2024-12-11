@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/11 Dekabr/11 Dekabr.iml" filepath="$PROJECT_DIR$/11 Dekabr/11 Dekabr.iml" />
       <module fileurl="file://$PROJECT_DIR$/ATL.iml" filepath="$PROJECT_DIR$/ATL.iml" />
       <module fileurl="file://$PROJECT_DIR$/FunctionalInterface/FunctionalInterface.iml" filepath="$PROJECT_DIR$/FunctionalInterface/FunctionalInterface.iml" />
       <module fileurl="file://$PROJECT_DIR$/Generics/Generics.iml" filepath="$PROJECT_DIR$/Generics/Generics.iml" />

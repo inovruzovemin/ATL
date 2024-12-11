@@ -5,12 +5,12 @@ public class SuiteRoom extends Room{
         kitchenAvailable=true;
     }
 
-    @Override
-    public void displayInfo() {
-        System.out.println("Room number: "+ getRoomNumber()
-                +" Price: "+getPrice()+
-                " Kitchen " +
-                (kitchenAvailable?"Available":"Not available"));
-
-    }
+//    @Override
+//    public void displayInfo() {
+//        System.out.println("Room number: "+ getRoomNumber()
+//                +" Price: "+getPrice()+
+//                " Kitchen " +
+//                (kitchenAvailable?"Available":"Not available"));
+//
+//    }
 }
