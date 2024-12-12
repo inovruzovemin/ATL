@@ -1,11 +1,12 @@
 import java.util.List;
 
 public class Customer {
+    private String name;
     private int customerId;
     private List<Tour> reserveTours;
 
-    public Customer(int customerId, List<Tour> tours) {
-        this.customerId = customerId;
+    public Customer(String name, List<Tour> tours) {
+        this.name = name;
         this.reserveTours = tours;
     }
 
@@ -36,5 +37,20 @@ public class Customer {
         else {
             System.out.println("Already calceled");
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public void displayDetails() {
+        System.out.println(" Customer name='" + name + '\'' +
+                ", customerId=" + customerId +
+                ", reserveTours=" + reserveTours);
     }
 }

@@ -3,14 +3,14 @@ public class Tour {
     private String tourName;
     private double price;
     private boolean isReserved;
-    private TourPacket packet;
+    private TourPacket tourPacket;
 
     public Tour(int tourId, String tourName, double price, TourPacket packet) {
         this.tourId = tourId;
         this.tourName = tourName;
         this.price = price;
         this.isReserved = false;
-        this.packet = packet;
+        this.tourPacket = packet;
     }
     public void reserveTour(){
         if(!isReserved){
@@ -49,7 +49,7 @@ public class Tour {
     }
 
     public TourPacket getPacket() {
-        return packet;
+        return tourPacket;
     }
 
 }

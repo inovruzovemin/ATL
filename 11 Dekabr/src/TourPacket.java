@@ -5,3 +5,4 @@ public enum TourPacket {
     CRUISE_TRIP,
     DESERT_SAFARI;
 }
+
