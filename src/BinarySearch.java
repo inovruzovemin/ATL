@@ -12,16 +12,17 @@ public class BinarySearch {
             for(int f=0;f<last;f++){
                 if(number[middle]==search) {
                     System.out.println("Search number found. Index N-" + middle );
+                    break;
                 }
                 else if(number[middle]<search) {
                     first = middle+1;
-                    middle = (last - first)/2;
+                    middle = (last + first)/2;
                     count++;
                 }
 
                 else {
                     last= middle -1;
-                    middle=(last-first)/2;
+                    middle=(last+first)/2;
                 }
         }
         System.out.println(count);
