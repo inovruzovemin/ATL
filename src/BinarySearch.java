@@ -8,13 +8,13 @@ public class BinarySearch {
         int middle = (first + last) / 2;
         int search = 75;
         int count = 0; // 25,
-        boolean avi= false;
+        boolean founded= false;
 
 
             for (int f = 0; f < last; f++) {
                 if (number[middle] == search) {
                     System.out.println("Search number found. Index N-" + middle);
-                    avi= true;
+                    founded= true;
                     break;
                 } else if (number[middle] < search) {
                     first = middle + 1;
@@ -27,8 +27,8 @@ public class BinarySearch {
                 }
 
             }
-            System.out.print(avi ? "Count : " + count : "");
-        System.out.println(!avi ? "Number not founded" : "");
+            System.out.print(founded ? "Count : " + count : "");
+        System.out.println(!founded ? "Number not founded" : "");
         }
 
     }
