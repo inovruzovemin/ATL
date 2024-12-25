@@ -4,10 +4,20 @@ import java.util.Arrays;
 import java.util.List;
 
 public class StringList {
+    public StringList() {
+    }
+
+    @Override
+    public String toString() {
+        return "StringList{}";
+    }
+
     public static void main(String[] args) {
         List<String> myList = Arrays.asList("Emin","Aytac","Huseyn");
 
-        var newList = myList.stream().map(a-> List.of(a.split(""))).toList();
+        var newList = myList.stream()
+                .map(a-> List.of(a.split("")))
+                .toList();
         System.out.println(newList);
 
     }
