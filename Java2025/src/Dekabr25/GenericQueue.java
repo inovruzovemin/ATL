@@ -27,7 +27,5 @@ public class GenericQueue <T>{
         integerQueue.dequeue();
 
         System.out.println(stringQueue.isEmpty());
-
-
     }
 }
