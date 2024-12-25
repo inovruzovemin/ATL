@@ -17,10 +17,16 @@ public class GenericQueue <T>{
     }
 
     public static void main(String[] args) {
-    GenericQueue genericQueue = new GenericQueue();
-    genericQueue.enqueue("4");
-        genericQueue.dequeue();
-        System.out.println(genericQueue.isEmpty());
+    GenericQueue <String> stringQueue = new GenericQueue();
+    stringQueue.enqueue("Hello");
+
+        GenericQueue <Integer> integerQueue = new GenericQueue();
+        integerQueue.enqueue(10);
+
+        stringQueue.dequeue();
+        integerQueue.dequeue();
+
+        System.out.println(stringQueue.isEmpty());
 
 
     }
